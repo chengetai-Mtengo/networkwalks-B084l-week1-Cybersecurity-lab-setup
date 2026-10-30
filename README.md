@@ -9,7 +9,9 @@
 
 <p align="center"> <img src="https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000" /> <img src="https://img.shields.io/badge/VirtualBox-v7.2-0070C0?style=flat-square&labelColor=000000" /> <img src="https://img.shields.io/badge/Kali%20Linux-v2026.2-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" /> <img src="https://img.shields.io/badge/Skill-Linux-404040?style=flat-square&labelColor=C00000" /> <img src="https://img.shields.io/badge/Network-10.0.0.0%2F24-238F89?style=flat-square&labelColor=000000" /> <img src="https://img.shields.io/badge/Penetration%20Testing-C00000?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" /> <img src="https://img.shields.io/badge/Skill-Virtualization-404040?style=flat-square&labelColor=C00000" /> <img src="https://img.shields.io/badge/GitHub-404040?style=flat-square&labelColor=0070C0&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/NetworkWalks-404040?style=flat-square&labelColor=C00000" /> </p>
 
-##📌  Project Overview
+---
+
+## 📌  Project Overview
 
 This project focuses on setting up a virtual cybersecurity and penetration-testing laboratory using Oracle VirtualBox and Kali Linux.
 
@@ -21,7 +23,9 @@ During the setup, I also encountered and resolved a network connectivity issue i
 
 This project provided practical exposure to Linux networking, virtualization, IP addressing, DNS configuration, and network troubleshooting.
 
-##🎯 Objectives
+---
+
+## 🎯 Objectives
 
 The main objectives of this project were to:
 
@@ -36,6 +40,8 @@ Verify network connectivity and DNS resolution.
 Create a clean VM snapshot for recovery.
 Document the laboratory setup and troubleshooting process.
 
+---
+
 ## 🛡️ Purpose of the Lab
 
 The laboratory provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
@@ -49,6 +55,8 @@ Penetration testing.
 Linux system administration.
 Network troubleshooting.
 
+---
+
 ## 🏗️ Lab Architecture
 
 
@@ -57,7 +65,9 @@ The laboratory consists of a host computer running VirtualBox, with Kali Linux o
 
 Additional target machines can be added to the same virtual network in future exercises.
 
-##⚙️ Lab Configuration
+---
+
+## ⚙️ Lab Configuration
 
 Component	Configuration
 Host OS	Ubuntu
@@ -74,75 +84,86 @@ Default Gateway	10.0.0.1
 DNS Server	8.8.8.8
 Future VM Range	10.0.0.3–10.0.0.99
 
+---
+
 Note: The IP addressing and DNS values above represent the intended lab configuration. Actual assigned values should be verified from the running VM.
 
 ⚠️ Important: This laboratory must only be used for systems that you own or have explicit permission to test.
 
-##🪜 Lab Setup Procedure
-Step 1. Install 7-Zip
+# 🪜 Lab Setup Procedure
+
+## Step 1. Install 7-Zip
 
 7-Zip was installed to extract the Kali Linux virtual machine package, which may be distributed as a .7z archive.
 
-Tool: 7-Zip
+**Tool:** 7-Zip
 
-Step 2. Install VirtualBox
+---
+
+## Step 2. Install VirtualBox
 
 VirtualBox was installed as the hypervisor for creating and managing virtual machines.
 
-Step 3. Create the NAT Network
+---
+
+## Step 3. Create the NAT Network
 
 A dedicated NAT Network was created in VirtualBox.
 
 Network Configuration:
 
-text
 Network Name: NatNetwork
 IPv4 Prefix:  10.0.0.0/24
 DHCP:         Enabled
 IPv6:         Disabled
 
 
-!
+(Screenshot- network -setting)
 
 A NAT Network was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
 This configuration will allow future attacker and target virtual machines to communicate within the laboratory.
 
-Step 4. Import Kali Linux
+---
+
+## Step 4. Import Kali Linux
 
 The Kali Linux virtual machine was downloaded and imported into VirtualBox.
 
 The VM network adapter was configured as follows:
 
-text
+```text
 Adapter 1
 Attached to: NAT Network
 Network: NatNetwork
 Adapter Type: Intel PRO/1000 MT Desktop
-
+```
 
 Memory allocation:
 
-text
+```text
 RAM: 2048 MB
+```
 
-
-!
+(kali-linux)
 
 A shared folder was also configured to facilitate file transfers between the host operating system and Kali Linux.
 
-Step 5. Configure Kali Linux Networking
+
+---
+
+## Step 5. Configure Kali Linux Networking
 
 After installing Kali Linux, the network configuration was checked to establish connectivity through the VirtualBox NAT Network.
 
 The intended IPv4 configuration was:
 
-text
+```text
 IP Address: 10.0.0.2
 Subnet Mask: 255.255.255.0
 Gateway: 10.0.0.1
 DNS: 8.8.8.8
-
+```
 
 !
 
@@ -154,7 +175,9 @@ However, the connectivity problem persisted.
 
 This led me to investigate Linux network management and troubleshoot the NetworkManager service.
 
-Step 6. Troubleshooting Network Connectivity
+---
+
+## Step 6. Troubleshooting Network Connectivity
 
 One of the most interesting challenges during this lab was resolving the network connectivity issue in Kali Linux.
 
@@ -212,26 +235,28 @@ After completing the initial configuration, a VirtualBox snapshot was created.
 
 Example snapshot name:
 
-text
+```text
 Clean Kali - Network Setup
-
+```
 
 The snapshot provides a baseline recovery point for the laboratory.
 
 If future cybersecurity exercises affect the VM configuration, the machine can be restored to this clean state.
 
-🔎 Lab Verification
+## 🔎 Lab Verification
 
 The following commands can be used to verify the network configuration and connectivity.
 
-Test	Command	Expected Result
-Check IP address	ip addr	Correct Kali IP displayed
-Check network interface	nmcli device status	Interface connected
-Check routing table	ip route	Default gateway displayed
-Test gateway	ping 10.0.0.1	Successful replies
-Test internet connectivity	ping 8.8.8.8	Successful replies
-Test DNS resolution	nslookup networkwalks.com	Domain resolves
-Verify Nmap	nmap --version	Nmap version displayed
+|Test	                     |Command                     | Expected Result
+|--------------------------|--------------------------------------------------------
+|Check IP address	         |`ip a`	                    |Correct Kali IP displayed
+|Check network interface   |	`nmcli device status`	    |Interface connected
+|Check routing table	     |`ip route`	                |Default gateway displayed
+|Test gateway              |	`ping 10.0.0.1`	          |Successful replies
+|Test internet connectivity|	`ping 8.8.8.8`	          |Successful replies
+|Test DNS resolution       |`nslookup networkwalks.com` | Domain resolves
+|Verify Nmap               |	`nmap --version`	        |Nmap version displayed
+
 Understanding Connectivity Testing
 
 Different tests help identify different networking problems.
