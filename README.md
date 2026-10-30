@@ -118,7 +118,8 @@ DHCP:         Enabled
 IPv6:         Disabled
 
 
-NATNetwork.png
+## NATNetwork Setup
+![](NATNetwork.png)
 
 A NAT Network was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
@@ -145,7 +146,8 @@ Memory allocation:
 RAM: 2048 MB
 ```
 
-KaliLinuxHome.png
+## Kali Linux Home
+![](KaliLinuxHome.png)
 
 A shared folder was also configured to facilitate file transfers between the host operating system and Kali Linux.
 
