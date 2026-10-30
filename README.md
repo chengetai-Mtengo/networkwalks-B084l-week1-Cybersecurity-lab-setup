@@ -386,7 +386,7 @@ NetworkManager Documentation: https://networkmanager.dev/docs/
 **Waqas Karim**\
 Cybersecurity Professional B082
 
-LinkedIn: ([https://www.linkedin.com/in/waqaskarim/](https://lnkd.in/waqaskarim/))
+LinkedIn: [([https://www.linkedin.com/in/waqaskarim/](https://lnkd.in/waqaskarim/))](https://www.linkedin.com/in/waqaskarim/)
 
 
 Cybersecurity Learner | Linux | Networking | Virtualization
