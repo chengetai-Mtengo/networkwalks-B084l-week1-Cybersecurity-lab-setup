@@ -118,7 +118,7 @@ DHCP:         Enabled
 IPv6:         Disabled
 
 
-(Screenshot- network -setting)
+NATNetwork.png
 
 A NAT Network was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
@@ -145,7 +145,7 @@ Memory allocation:
 RAM: 2048 MB
 ```
 
-(kali-linux)
+KaliLinuxHome.png
 
 A shared folder was also configured to facilitate file transfers between the host operating system and Kali Linux.
 
@@ -353,6 +353,8 @@ I learned the role of DNS in translating domain names into IP addresses and why 
 I learned how Linux NetworkManager manages network connections and how restarting the service can help restore connectivity when network management is experiencing problems.
 
 6. VM Snapshots
+
+   Snapshot.png
 
 I learned the importance of creating clean VM snapshots before performing experimental or potentially disruptive cybersecurity activities.
 
