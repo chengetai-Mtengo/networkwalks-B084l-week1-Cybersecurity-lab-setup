@@ -371,13 +371,23 @@ This laboratory is intended strictly for educational purposes and authorized sec
 All penetration-testing activities must be conducted within systems and environments where explicit permission has been granted.
 
 ## 🔗 Tools & Resources
-7-Zip: https://7-zip.org/download.html
-VirtualBox: https://virtualbox.org/wiki/Downloads
-Kali Linux: https://kali.org/get-kali
-NetworkManager Documentation: https://networkmanager.dev/docs/
-👤 Author
 
-Chengetai Mtengo
+7-Zip: https://7-zip.org/download.html
+
+VirtualBox: https://virtualbox.org/wiki/Downloads
+
+Kali Linux: https://kali.org/get-kali
+
+NetworkManager Documentation: https://networkmanager.dev/docs/
+
+---
+
+👤 Author 
+**Waqas Karim**\
+Cybersecurity Professional B082
+
+LinkedIn: ([https://www.linkedin.com/in/waqaskarim/](https://lnkd.in/waqaskarim/))
+
 
 Cybersecurity Learner | Linux | Networking | Virtualization
 
