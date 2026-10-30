@@ -379,7 +379,7 @@ Chengetai Mtengo
 
 Cybersecurity Learner | Linux | Networking | Virtualization
 
-LinkedIn: [https://www.linkedin.com/in/Chengetai Mtengo/] (https://www.linkedin.com/in/Chengetai Mtengo/)
+LinkedIn: ([https://www.linkedin.com/in/Chengetai Mtengo/](https://lnkd.in/p/dn7uVUpy))
 
 📌 Project Information
 
